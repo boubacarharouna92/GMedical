@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="fragments/header :: header-css"/>
+</head> 
+<body><br><br>
+
+<div th:replace="fragments/header :: header"/>
+
+<section id="main-body">
+  <div class="container">
+   <div class="row">
+    
+      <div class="table-responsive">
+     <table class="datatable-responsive table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+        <thead>
+           <tr>
+               <th > Nom   </th>
+               <th > Prenom   </th>
+               <th > Date de naissance  </th>
+                <th> Telephone </th>
+                 <th> Motif  </th>
+                 <th > Date de consultation  </th>
+               <th align="center" class="btn_action"></th>
+               <th align="center" class="btn_action"></th>
+               <th align="center" class="btn_action"></th>
+           </tr>
+         </thead>
+         <tbody>
+                <tr th:each="consultation : ${consultations}">
+                    
+                     <td th:text="${consultation.patient.nom}"></td>
+                      <td th:text="${consultation.patient.prenom}"></td>
+                      <td th:text="${consultation.patient.dateNaissance}"></td>
+                      <td th:text="${consultation.patient.telephone}"></td>
+                       <td th:text="${consultation.Motif}"></td>
+                      <td th:text="${consultation.DateConsultation}"></td>
+                      <td><a href="#"><i class="fa fa-folder-open"></i> </a></td>
+                 	  <td><a href="#"><i class="fa fa-link"></i></a></td> 
+                 	  <td><a href="#"><i class="fa fa-header"></i></a></td> 
+                </tr>                            
+         </tbody>
+     </table>
+        </div>
+    
+    
+</div>   
+</section>
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html> 

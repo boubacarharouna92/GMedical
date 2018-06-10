@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="fragments/header :: header-css"/>
+</head> 
+<body>
+<div th:replace="fragments/header :: header"/>
+
+<section id="main-body">
+  <div class="container">
+   <div class="row">
+ 	
+ 	<div class="pull-right">
+   	<button class="nbtn btn-success" data-toggle="modal" th:href="@{/AjoutPatient}"  ><i class="fa fa-plus-circle"></i> <span>Ajouter un patient</span></button >						
+	</div>
+	<br>
+	<br>
+	
+      <div class="table-responsive">
+     <table class="datatable-responsive table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+        <thead>
+           <tr>
+               <th >Nom</th>
+               <th >Prénom</th>
+               <th >Date de Naissance</th>
+               <th >Lieu de naissance</th>
+               <th >Proféssion</th>
+               <th >Téléphone</th>
+               <th >Adresse</th>
+               
+               <th align="center" class="btn_action"></th>
+               <th align="center" class="btn_action"></th>
+               <th align="center" class="btn_action"></th>
+           </tr>
+         </thead>
+         <tbody>
+                <tr th:each="patient : ${patients}">
+                     <td th:text="${patient.nom}"></td>
+                     <td th:text="${patient.prenom}"></td>
+                     <td th:text="${patient.dateNaissance}"></td>
+                      <td th:text="${patient.lieuNaissance}"></td>
+                       <td th:text="${patient.profession}"></td>
+                        <td th:text="${patient.telephone}"></td>
+                         <td th:text="${patient.adresse}"></td>
+                    <td><a th:href="@{ModifierPatient/{id}/(id=${patient.id})}" class="eBtn"  data-toggle="modal"><i class="fa fa-pencil "></i></a></td>
+ 					<td> <a  th:href="@{SupprimerPatient/{id}(id=${patient.id})}" class="delBtn"  data-toggle="modal"><i class="fa fa-remove"></i></a></td>
+ 					<td> <a  th:href="@{/AjoutConsultation /{id}(id=${patient.id})}"><i class="fa fa-info-circle "></i></a></td>
+                </tr>                            
+         </tbody>
+     </table>
+        </div>
+    
+    
+</div>   
+</section>
+	<!-- Add Modal HTML  Ajouter Paient-->
+ 		<div class="myForm">
+			<form method="post" th:action="@{/AjoutPatient}">
+			<div class="modal fade" id="exampleModal" tabindex="-1"
+					role="dialog" aria-labelledby="exampleModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Update or Create </h5>
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+					<div class="modal-body">					
+						<div class="form-group">
+	                      <label for="libelle" >Nom</label>
+	                      <input type="text" class="form-control" id="nom" name="nom" required value="" />
+                	    </div>
+						<div class="form-group">
+                   		   <label for="libelle" >Prénom</label>
+                   		   <input type="text" class="form-control" id="prenom" name="prenom"  required  value="" />
+                  		</div>
+						<div class="form-group">
+                    	  <label for="libelle" >Date de naissance</label>
+                    	  <input type="datetime" class="form-control" id="dateNaissance" name="dateNaissance" required value="" />
+                  		</div>
+						<div class="form-group">
+	                      <label for="libelle" >Lieu de naissance</label>
+	                      <input type="text" class="form-control" id="lieuNaissance" name="lieuNaissance" required  value=""/>
+                 		 </div>	
+                 		 
+                 		 <div class="form-group">
+                   		   <label for="libelle" >Genre</label>
+                   		   <input type="text" class="form-control" id="sexe" name="sexe" required value="" />
+                  		</div>
+                 
+                 		 <div class="form-group">
+                	        <label for="libelle" >Telephone</label>
+                 	     	<input type="text" class="form-control" id="telephone" name="telephone" required value="" />
+                		  </div>
+                  
+		                   <div class="form-group">
+		                      <label for="libelle" >Adresse</label>
+		                      <input type="text" class="form-control" id="adresse" name="adresse" required value="" />
+		                  </div>
+                  
+		                  
+		                   <div class="form-group">
+		                      <label for="libelle" >Profession </label>
+		                      <input type="text" class="form-control" id="profession" name="profession" required  value="" />
+		                  </div>
+  
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary"
+									data-dismiss="modal">Close</button>
+								<input type="submit" class="btn btn-primary" value="save"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</form>
+		</div>
+ 
+ 
+ 
+ 
+		<!-- Delete Modal HTML -->
+	<div class="modal fade" id="myModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Suppression </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="alert alert-danger">
+        
+        	Voulez-vous r�element supprimer ce patient ?
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a  href="" type="button" class="btn btn-danger" id="delRef">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html> 

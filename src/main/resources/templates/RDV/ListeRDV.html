@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="fragments/header :: header-css" />
+</head>
+<body>
+		<br><br>
+	<div th:replace="fragments/header :: header" />
+
+	<section id="main-body">
+		<div class="container">
+			<div class="row">
+					<div class="pull-right">
+					   	<button class="btn btn-success" data-toggle="modal" th:href="@{/AjoutRDV}"  ><i class="fa fa-plus-circle"></i> <span>Creer un rendez-vous </span></button >						
+					</div>
+						<br><br>
+				<div class="table-responsive">
+					<table 
+						class=" datatable-responsive table table-striped table-bordered dt-responsive nowrap"
+						cellspacing="0" width="100%">
+						<thead>
+							<tr>
+								<th>date RDV</th>
+								<th>heure RDV</th>
+								<th>Motif</th>
+								<th align="center" class="btn_action"></th>
+								<th align="center" class="btn_action"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="rdv : ${rdvs}">
+								<td th:text="${rdv.dateRdv}"></td>
+								<td th:text="${rdv.heureRdv}"></td>
+								<td th:text="${rdv.MotifRdv}"></td>
+								
+
+								<td><a href="#"><i class="fa fa-pencil"></i> </a></td>
+								<td><a href="#"><i class="fa fa-remove"></i> </a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+			</div>
+	</section>
+
+	<div th:replace="fragments/footer :: footer" />
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="fragments/header :: header-css"/>
+</head> 
+<body>AjoutEcole
+<div th:replace="fragments/header :: header"/>
+
+<section id="main-body">
+  <div class="container">
+   <div class="row">
+    <div class="col-sm-12 box">
+        <h4>Modification  </h4>
+        <hr/>  
+         <form method="post" th:action="@{/editerMedicament/{id}(id=${id_medicament})}">
+            <div class="modal-body">
+                   <div class="form-group">
+                      <label for="libelle" >Nom du medicament </label>
+                      <input type="text" class="form-control" id="libelle" name="libelle" th:value ="${medicament.libelle}" />
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="libelle" > Type de medicament</label>
+                      <input type="text" class="form-control" id="libelle" name="typeMedicament" th:value ="${medicament.typeMedicament}" />
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="description" > Description de medicament</label>
+                      <input type="text" class="form-control" id="description" name="description" th:value ="${medicament.description}" />
+                  </div>
+
+            </div>
+
+            <div class="modal-footer">
+             <input type="submit" class="btn btn-primary" value="Valider"/>
+            </div>
+          </form>
+    
+
+    </div>
+    
+  </div>
+</div>   
+</section>
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html> l>

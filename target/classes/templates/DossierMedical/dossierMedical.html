@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="fragments/header :: header-css"/>
+</head> 
+<body>
+<ul  class="breadcrumb">
+    <li><a href="#">Acceuil</a></li>
+    <li><a href="#">Patient</a></li>
+    <li class="active">Dossier Medicale</li>
+</ul>
+
+<div th:replace="fragments/header :: header"/>
+
+<section id="main-body">
+  <div class="container">
+   <div class="row">
+    <div class="col-md-6">
+  
+        <div class="panel panel-success">
+			    <div class="panel-heading">
+			      <h3 class="panel-title">Civilites du patient</h3>
+			    </div>
+			    <div class="panel-body">
+				   
+         
+			    
+			    </div>
+		</div>
+     
+    </div>
+    
+    <div class="col-md-6">
+  
+        <div class="panel panel-success">
+			    <div class="panel-heading">
+			    <h3 class="panel-title">Traitement en cours </h3>
+			    </div>
+			    <div class="panel-body">
+			     <label> Nom  : </label>
+			    </div>
+		</div>
+     
+	    </div>
+	    
+	     <div class="col-md-6">
+	 	 <div class="panel panel-success">
+				    <div class="panel-heading">
+				    <h3 class="panel-title">Antecedent Personnel</h3>
+				    </div>
+				    
+				    <div class="panel-body">
+				     <form method="post">
+            	<div class="modal-body">
+                  <div class="form-group">
+                      <label for="Antectedent" >Libelle Antecendent </label>
+                      <input type="text" class="form-control" id="libelle" name="Antectedent"  />
+                  </div>
+                  
+                   <div class="form-group">
+                      <label for="Antectedent" >Commentaire</label>
+                      <input type="areatext" class="form-control" id="libelle" name="Antectedent"  />
+                  </div>
+                
+            </div>
+
+            <div class="modal-footer">
+             <button type="submit" class="btn btn-primary" >Valider</button>
+            </div>
+          </form>
+				    </div>
+			</div>
+	    </div>
+	     <div class="col-md-6">
+	 	 <div class="panel panel-success">
+				    <div class="panel-heading">
+				    <h3 class="panel-title">Antecedent Familiaux</h3>
+				    </div>
+				    <div class="panel-body">
+				    
+				     <form method="post">
+            	<div class="modal-body">
+                  <div class="form-group">
+                      <label for="Antectedent" >Libelle Antecendent </label>
+                      <input type="text" class="form-control" id="libelle" name="Antectedent"  />
+                  </div>
+                  
+                   <div class="form-group">
+                      <label for="Antectedent" >Commentaire</label>
+                      <input type="textarea" class="form-control" id="libelle" name="Antectedent"  />
+                  </div>
+                
+            </div>
+
+            <div class="modal-footer">
+             <button type="submit" class="btn btn-primary" >Valider</button>
+            </div>
+          </form>
+				    
+				    </div>
+			</div>
+	    </div>
+	     <div class="col-md-6">
+ 	 		<div class="panel panel-success">
+			    <div class="panel-heading">
+			    <h3 class="panel-title">Les paramètre vitaux</h3>
+			    </div>
+			    <div class="panel-body">
+			    </div>
+			</div>
+    	</div>
+	    <div class="col-md-6">
+ 	 		<div class="panel panel-success">
+			    <div class="panel-heading">
+			    <h3 class="panel-title">Les examens </h3>
+			    </div>
+			    <div class="panel-body">
+			    </div>
+			</div>
+    	</div>
+
+  </div>
+</div>   
+</section>
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html> 

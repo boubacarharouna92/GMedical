@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="fragments/header :: header-css"/>
+</head> 
+<body>
+<br><br>
+<div th:replace="fragments/header :: header"/>
+
+<section id="main-body">
+  <div class="container">
+   <div class="row">
+    	<div class="pull-right">
+					   	<button class="btn btn-success" data-toggle="modal" th:href="@{/AjouterHospitalisation}"  ><i class="fa fa-plus-circle"></i> <span>Creer un Hospitalisation </span></button >						
+					</div>
+						<br><br>
+      <div class="table-responsive">
+     <table  class="datatable-responsive table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+        <thead>
+           <tr>
+               <th > Date d'hospitalisation  </th>
+               <th > Date de sorti  </th>
+               <th > Motif d'hospitalisation</th>
+               <th align="center" class="btn_action"></th>
+               <th align="center" class="btn_action"></th>
+           </tr>
+         </thead>
+         <tbody>
+                <tr th:each="hospitalisation : ${hospitalisations}">
+                    
+                     <td th:text="${hospitalisation.dateHospitalisation}"></td>
+                      <td th:text="${hospitalisation.dateSorti}"></td>
+                      <td th:text="${hospitalisation.motif}"></td>
+                      
+                     <td><a href="#"><i class="fa fa-pencil"></i> </a></td>
+                 <td> <a href="#" ><i class="fa fa-remove"></i> </a></td>  
+                </tr>                            
+         </tbody>
+     </table>
+        </div>
+    
+    
+</div>   
+</section>
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html> 

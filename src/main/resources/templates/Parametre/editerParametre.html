@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="fragments/header :: header-css"/>
+</head> 
+<body>AjoutEcole
+<div th:replace="fragments/header :: header"/>
+
+<section id="main-body">
+  <div class="container">
+   <div class="row">
+    <div class="col-sm-12 box">
+        <h4>Modification  </h4>
+        <hr/>  
+         <form method="post" th:action="@{/editerParametre/{id}(id=${id_parametre})}">
+            <div class="modal-body">
+                   <div class="form-group">
+                      <label for="libelle" >Libelle des parametres vitaux </label>
+                      <input type="text" class="form-control" id="libelle" name="libelle" th:value ="${parametre.libelle}" />
+                  </div>
+                  
+                 
+         
+            </div>
+
+            <div class="modal-footer">
+             <input type="submit" class="btn btn-primary" value="Valider"/>
+            </div>
+          </form>
+    
+
+    </div>
+    
+  </div>
+</div>   
+</section>
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html> l>

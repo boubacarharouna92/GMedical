@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="fragments/header :: header-css"/>
+</head> 
+<body>
+	<ul  class="breadcrumb">
+	    <li><a href="#">Acceuil</a></li>
+	    <li><a href="#">Patient</a></li>
+	    <li class="active">Dossier Medicale</li>
+	</ul>
+	<div th:replace="fragments/header :: header"/>
+	<section id="main-body">
+	<input type="hidden" value="11" id="consultation" />
+	  	<div class="container">
+		   	<div class="row">
+		   	<div class="col-md-6">
+       			<div class="panel panel-primary" >
+				    <div class="panel-heading">
+				    	<h3 class="panel-title">Informations Patient </h3>
+					</div>
+			   		<div class="panel-body">
+					<div>
+			    	<label><strong>Nom : </strong></label><label th:text="${patient.nom }"></label>
+			    	</div>
+			    	<div>
+			    	<label>Prenom  : </label><label th:text="${patient.prenom }"></label>
+			    	</div>
+			    	<div>
+			    	<label>Date de naissance  : </label><label th:text="${patient.dateNaissance }"></label>
+			    	</div>
+				     
+			  		</div>
+			   	</div>	
+			</div> 
+			
+			<div class="col-md-6">
+       			<div class="panel panel-primary" >
+				    <div class="panel-heading">
+				    	<h3 class="panel-title">Parametre vitaux </h3>
+				</div>
+			   <div class="panel-body">
+					<div class="pull-right">
+			   			<button class="btn btn-success" id="btnparametrevital"><i class="fa fa-plus-circle"></i> <span>Ajouter</span></button >						
+					</div>
+					<br><br>
+				     <table class="datatable-responsive table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+				        <thead>
+				           <tr>
+				               <th >Parametre</th>
+				               <th > Valeur</th>
+				               <th align="center" class="btn_action"></th>
+				               <th align="center" class="btn_action"></th>
+				           </tr>
+				         </thead>
+				         <tbody id="pv">                               
+				         </tbody>
+				     </table>
+			  		</div>
+			   </div>	
+			</div> 
+			
+			<div class="col-md-6">
+       			<div class="panel panel-primary" >
+				    <div class="panel-heading">
+				    	<h3 class="panel-title">Symptômes </h3>
+				</div>
+			   <div class="panel-body">
+					<div class="pull-right">
+			   			<button class="btn btn-success" id="btnsymptome"><i class="fa fa-plus-circle"></i> <span>Ajouter</span></button >						
+					</div>
+					<br><br>
+				     <table class="datatable-responsive table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+				        <thead>
+				           <tr>
+				               <th >Libelle</th>
+				               
+				               <th align="center" class="btn_action"></th>
+				               <th align="center" class="btn_action"></th>
+				           </tr>
+				         </thead>
+				         <tbody>                               
+				         </tbody>
+				     </table>
+			  		</div>
+			   </div>	
+			</div> 
+			
+			<div class="col-md-6">
+       			<div class="panel panel-primary" >
+				    <div class="panel-heading">
+				    	<h3 class="panel-title">Examen </h3>
+				</div>
+			   <div class="panel-body">
+					<div class="pull-right">
+			   			<button class="btn btn-success" id="btnexamen"><i class="fa fa-plus-circle"></i> <span>Ajouter</span></button >						
+					</div>
+					<br><br>
+				     <table class="datatable-responsive table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+				        <thead>
+				           <tr>
+				               <th >Parametre</th>
+				               <th > Valeur</th>
+				               <th align="center" class="btn_action"></th>
+				               <th align="center" class="btn_action"></th>
+				           </tr>
+				         </thead>
+				         <tbody >                               
+				         </tbody>
+				     </table>
+			  		</div>
+			   </div>	
+			</div> 
+			
+			
+		</div>
+		</div>
+		<div id="div_info"> </div>  
+	</section>
+	<div th:replace="fragments/footer :: footer"/>
+</body>
+</html> 

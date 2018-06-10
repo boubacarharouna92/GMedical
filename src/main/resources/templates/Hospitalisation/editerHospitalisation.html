@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="fragments/header :: header-css"/>
+</head> 
+<body>AjoutEcole
+<div th:replace="fragments/header :: header"/>
+
+<section id="main-body">
+  <div class="container">
+   <div class="row">
+    <div class="col-sm-12 box">
+        <h4>Modification  </h4>
+        <hr/>  
+         <form method="post" th:action="@{/editerHospitalisation/{id}(id=${id_hospitalisation})}">
+            <div class="modal-body">
+                <div class="form-group">
+                      <label for="dateArrive" >Date d'hospitalisation</label>
+                      <input type="DateTime" class="form-control" id="dateConsultation" name="dateHospitalisation" th:value ="${hospitalisation.dateHospitalisation}"/>
+                  </div>
+                  
+                   <div class="form-group">
+                      <label for="dateSorti" >Date de sorti </label>
+                      <input type="DateTime" class="form-control" id="dateSorti" name="dateSorti" th:value ="${hospitalisation.dateSorti}" />
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="Motif" >Motif de consultation </label>
+                      <input type="text" class="form-control" id="Motif" name="motif" th:value ="${hospitalisation.motif}" />
+                  </div>
+
+            </div>
+
+            <div class="modal-footer">
+             <input type="submit" class="btn btn-primary" value="Valider"/>
+            </div>
+          </form>
+    
+
+    </div>
+    
+  </div>
+</div>   
+</section>
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

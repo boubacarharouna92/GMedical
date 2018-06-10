@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="fragments/header :: header-css"/>
+</head> 
+<body>AjoutEcole
+<div th:replace="fragments/header :: header"/>
+
+<section id="main-body">
+  <div class="container">
+   <div class="row">
+    <div class="col-sm-12 box">
+        <h4>Ajout d'un patient </h4>
+        <hr/>  
+         <form method="post" th:action="@{/ModifierPatient/{id}(id=${id_patient})}">
+            <div class="modal-body">
+                  <div class="form-group">
+                      <label for="nom" >Nom</label>
+                      <input type="text" class="form-control" id="nom" name="nom" th:value="${patient.nom}"  />
+                  </div>
+                  <div class="form-group">
+                      <label for="prenom" >Prénom</label>
+                      <input type="text" class="form-control" id="prenom" name="prenom" th:value="${patient.prenom}" />
+                  </div>
+                  <div class="form-group">
+                      <label for="dateNaissance" >Date de naissance</label>
+                      <input type="text" class="form-control" id="dateNiassance" name="dateNaissance" th:value="${patient.dateNaissance}"  />
+                  </div>
+                   <div class="form-group">
+                      <label for="lieuNaissance" >Lieu de naissance</label>
+                      <input type="text" class="form-control" id="lieuNaissance" name="lieuNaissance" th:value="${patient.lieuNaissance}" />
+                  </div>
+                  <div class="form-group">
+                      <label for="sexe" >Genre</label>
+                      <input type="text" class="form-control" id="sexe" name="sexe" th:value="${patient.sexe}" />
+                  </div>
+                 
+                  <div class="form-group">
+                      <label for="telephone" >Téléphone</label>
+                      <input type="text" class="form-control" id="telephone" name="telephone"  th:value="${patient.telephone}"/>
+                  </div>
+                  
+                   <div class="form-group">
+                      <label for="adresse" >Adresse</label>
+                      <input type="text" class="form-control" id="adresse" name="adresse" th:value="${patient.adresse}" />
+                  </div>
+                  
+                  
+                   <div class="form-group">
+                      <label for="profession" >Profession </label>
+                      <input type="text" class="form-control" id="profession" name="profession" th:value="${patient.profession}" />
+                  </div>
+                 
+                
+            </div>
+
+            <div class="modal-footer">
+             <input type="submit" class="btn btn-primary" value="Valider"/>
+            </div>
+          </form>
+    
+
+    </div>
+    
+  </div>
+</div>   
+</section>
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html> 

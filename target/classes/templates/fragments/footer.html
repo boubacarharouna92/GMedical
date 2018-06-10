@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+</head>
+<body>
+<div th:fragment="footer">
+	<!--  
+    <div class="container">
+        <footer>© 2017 laperse.net </footer>
+    </div>
+    -->   
+<script src="/js/jquery.dataTables.min.js"></script>
+<script src="/js/dataTables.bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.datatable-responsive').DataTable();
+  });
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".btn").click(function(){
+        $("#addPatientModal").modal('show');
+    });
+});
+</script>
+
+</div>
+
+</body>
+</html>

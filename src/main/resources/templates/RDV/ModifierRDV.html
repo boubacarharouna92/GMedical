@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="fragments/header :: header-css" />
+</head>
+<body>
+	AjoutEcole
+	<div th:replace="fragments/header :: header" />
+
+	<section id="main-body">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 box">
+					<h4>Modifier RDV</h4>
+					<hr />
+					<form method="post"
+						th:action="@{/Modifier RDV/{id}(id=${id_ RDV})}">
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="dateRdv">date RDV</label> <input
+									type="text" class="form-control" id="libelle"
+									name="dateRdv" th:value="${nRDVdateRdv}" />
+							</div>
+							<div class="form-group">
+								<label for="heureRdv">date de sortie</label> <input
+									type="text" class="form-control" id="libelle"
+									name="heureRdv" th:value="${RDV.heureRdv}" />
+							</div>
+							<div class="form-group">
+								<label for="MotifRdv">Motif</label> <input
+									type="text" class="form-control" id="libelle"
+									name="MotifRdv" th:value="${RDV.MotifRdv}" />
+							</div>
+							<div class="form-group"></div>
+
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-primary">Valider</button>
+							</div>
+					</form>
+
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<div th:replace="fragments/footer :: footer" />
+
+</body>
+</html>
