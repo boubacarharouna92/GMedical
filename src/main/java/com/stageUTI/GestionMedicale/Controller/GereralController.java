@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class GereralController{
 
-	 @GetMapping("/")
+	/* @GetMapping("/")
 	    public String index() { 	    
 		 	return "Patients/ListePatient";
-	    }
+	    }*/
 }

@@ -17,11 +17,12 @@ public class ConsultForm {
 	
 	
 	
-	public ConsultForm(Date dateConsultation, String motif) {
+	
+	public ConsultForm(String motif) {
 		
-		DateConsultation = dateConsultation;
 		Motif = motif;
 	}
+	
 	public ConsultForm() {
 		
 		// TODO Auto-generated constructor stub

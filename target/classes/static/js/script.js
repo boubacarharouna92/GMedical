@@ -3,11 +3,23 @@
  */
 
 $(document).ready(function() {
+	  
 	consultation = $('#consultation').val();
 	
 	$.get('../GetParametreUser',{consultation:consultation},function(dat2){
     	$('#pv').html(dat2);
     });
+	
+	$.get('../GetSP',{consultation:consultation},function(dat2){
+    	$('#sp').html(dat2);
+    });
+	
+	$.get('../Getexm',{consultation:consultation},function(dat2){
+
+    	$('#exp').html(dat2);
+    });
+	
+	
 			/*   Parametre Vital     */
 	
 	$('#btnparametrevital').click(function(){
@@ -37,12 +49,28 @@ $(document).ready(function() {
                     $('#div_info').html(dat);
                     $("#myModal").modal('show');
                     $('#addsymptome').click(function(){
-                    	libelle= $('#libelle').val();
-	                        consultation = $('#consultation').val();
-	                        $.get('../AddSymptomeUser',{libelle:libelle,consultation:consultation},function(dat2){
+                    	$('#sp').html('');
+	                        $(':checkbox').each(function(){
+	                        	if($(this).is(':checked'))
+	                        	{
+	                        		consultation = $('#consultation').val();
+	                        		symptome = $(this).val();
+	                        		
+	                        		
+	                        		$.get('../AddSymptomeUser',{consultation:consultation,symptome:symptome},function(dat){
+	    	                        	
+	                        			$('#sp').append(dat);
+	    	                        });
+	                        		
+	                        	}
+	                        	else
+	                        	{
+	                        		
+	                        	}
 	                        	
-	                        	$('#sp').html(dat2);
 	                        });
+	                        
+	                        
 		                    $("#myModal").attr('data-dismiss','modal');
 		                    $("#myModal").click();
                     	});
@@ -51,24 +79,37 @@ $(document).ready(function() {
         
             $('#btnexamen').click(function(){
          		
-                $.get('../examen',function(dat){ 
+                $.get('../AjoutExamen',function(dat){ 
                         $('#div_info').html(dat);
                         $("#myModal").modal('show');
                         $('#addexamen').click(function(){
-	                            libelle= $('#libelle').val();
-	                            consultation = $('#consultation').val();
-	                            $.get('../AddExamenUser',{libelle:libelle,consultation:consultation},function(dat2){
-	                            	
-	                            	$('#sp').html(dat2);
-	                            });
-	                   
-		                        $("#myModal").attr('data-dismiss','modal');
-		                        $("#myModal").click();
+                        	$('#exp').html('');
+	                        $(':checkbox').each(function(){
+	                        	if($(this).is(':checked'))
+	                        	{
+	                        		consultation = $('#consultation').val();
+	                        		examen = $(this).val();
+	                        		
+	                        		
+	                        		$.get('../AddExamenUser',{consultation:consultation,examen:examen},function(dat){
+	    	                        	
+	                        			$('#exp').append(dat);
+	    	                        });
+	                        		
+	                        	}
+	                        	else
+	                        	{
+	                        		
+	                        	}
+	                        	
 	                        });
+	                        
+	                        
+		                    $("#myModal").attr('data-dismiss','modal');
+		                    $("#myModal").click();
                     	});
-            		});
-   
-    		
+                	});  
+        		}); 
 	
 	 
    

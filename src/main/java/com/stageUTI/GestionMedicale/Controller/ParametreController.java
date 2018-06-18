@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.stageUTI.GestionMedicale.Beans.Chambre;
 import com.stageUTI.GestionMedicale.Beans.Parametre;
 import com.stageUTI.GestionMedicale.Beans.Parametre;
+import com.stageUTI.GestionMedicale.BeansForm.ChambreForm;
 import com.stageUTI.GestionMedicale.BeansForm.ParametreForm;
 import com.stageUTI.GestionMedicale.BeansForm.ParametreForm;
 import com.stageUTI.GestionMedicale.Repository.ParametreRepository;
@@ -31,6 +33,40 @@ public class ParametreController {
 		/*
 			Ajouter un  Parametre  
 		 */
+	
+	 @GetMapping("/createParametre")
+	    public String createParametre() { 	    
+		 	return "Parametre/createParametre";
+	    }
+	 
+	 @PostMapping("/createParametre")
+	  public String ClasseSubmit(@Valid ParametreForm form,BindingResult bindingResult, Model model) {
+	    if (!bindingResult.hasErrors()) 
+	    {
+	        
+	        String libelle = form.getLibelle(); 
+	       	        
+	        try
+	        {
+	          Parametre parametre = new Parametre(libelle);
+	          
+	          parametre_service.save(parametre);
+	          
+	        }
+		    catch(Exception e)
+		    {
+		      
+		    }
+	    }
+	    else
+	    {
+	        
+	        
+	    }
+	  
+	    return "Parametre/createParametre";
+	      
+	  }
 	
 	
 	  /*

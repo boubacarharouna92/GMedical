@@ -3,14 +3,14 @@
 <head>
   <div th:replace="fragments/header :: header-css"/>
 </head> 
-<body>AjoutEcole
+<body>
 <div th:replace="fragments/header :: header"/>
 
 <section id="main-body">
   <div class="container">
    <div class="row">
     <div class="col-sm-12 box">
-        <h4>Ajout d'un patient </h4>
+        <h4>Modification d'un patient </h4>
         <hr/>  
          <form method="post" th:action="@{/ModifierPatient/{id}(id=${id_patient})}">
             <div class="modal-body">
@@ -55,7 +55,7 @@
             </div>
 
             <div class="modal-footer">
-             <input type="submit" class="btn btn-primary" value="Valider"/>
+             <input type="submit" class="btn btn-primary" value="Modifier"/>
             </div>
           </form>
     

@@ -36,16 +36,16 @@
 
     <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" style="">
       <ul class="nav navbar-nav">
-        <li><a th:href="@{/ListePatient}" >Patient</a></li>
-        <li><a th:href="@{/ListeRDV}" >Rendez-vous </a></li>
-        <li><a th:href="@{/listeConsult}" >Consultation </a></li>
-        <li><a th:href="@{/listeHospitalisation}" >Hospitalisation </a></li>
-         <li><a th:href="@{/Formation}" >Maternité </a></li>
-          <li><a th:href="@{/Formation}" >Comptabilité</a></li>
+        <li><a th:href="@{/ListePatient}" sec:authorize="hasAnyRole('ROLE_SECRETAIRE','ROLE_ADMIN','ROLE_MEDECIN')" >Patient</a></li>
+        <li><a th:href="@{/ListeRDV}" sec:authorize="hasAnyRole('ROLE_SECRETAIRE','ROLE_MEDECIN','ROLE_ADMIN')" >Rendez-vous </a></li>
+        <li><a th:href="@{/listeConsult}" sec:authorize="hasAnyRole('ROLE_MEDECIN','ROLE_ADMIN')" >Consultation </a></li>
+        <li><a th:href="@{/listeHospitalisation}" sec:authorize="hasAnyRole('ROLE_SECRETAIRE','ROLE_MEDECIN','ROLE_ADMIN')" >Hospitalisation </a></li>
+         <li><a th:href="@{/Formation}" sec:authorize="hasRole('ROLE_ADMIN')">Maternité </a></li>
+          <li><a th:href="@{/Formation}" sec:authorize="hasRole('ROLE_ADMIN')" >Comptabilité</a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-					<li> <a th:href="@{/login?logout}">Déconnection</a></li>
+					<li> <a th:href="@{/logout}">Déconnection</a></li>
 				</ul>
       
     </div><!--/.nav-collapse -->

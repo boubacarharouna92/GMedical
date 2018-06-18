@@ -17,6 +17,27 @@ body {
 	background: #d0e9c6;
 }
 
+#login{
+
+    width: 25%;
+    margin-left: 50%; 
+    margin-top: 10%;
+    padding: 20px;
+    background: #d8eda14d;
+    border: 3px solid #5cf6aa66;
+    border-radius: 6px;
+    color: #ffffff;
+    box-shadow: 10px #5cf6aa66;
+}
+
+#body {
+    color:black;
+    background-color:white;
+    background-image: url("../images/visite.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    }
+
 .titre{
   font-family: "Time New Roman";
   font-size: 1.2em;
@@ -309,5 +330,18 @@ header {
 	 
 	margin-left: 100%;
 }
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 

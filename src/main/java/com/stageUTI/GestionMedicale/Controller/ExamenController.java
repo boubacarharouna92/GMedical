@@ -28,13 +28,18 @@ public class ExamenController {
 	@Resource
 	  private ConsultationRepository consultation_service;
 	
-	@GetMapping("/examen")
-    public String examen() { 	    
-	 	return "Symptome/examen";
+	@GetMapping("/AjoutExamen")
+    public String AjoutExamen(Model model) { 	 
+		
+		List<Examen> examens =  (List<Examen>) examen_service.findByValide(1);
+	    model.addAttribute("examens", examens);
+		
+	 	return "Examen/AjoutExamen";
     }
-@PostMapping("/examen")
+@PostMapping("/AjoutExamen")
   public String ClasseSubmit(@Valid ExamenForm form,BindingResult bindingResult, Model model) {
-    if (!bindingResult.hasErrors()) 
+  
+	if (!bindingResult.hasErrors()) 
     {
         String libelle = form.getLibelle(); 
         
@@ -56,21 +61,28 @@ public class ExamenController {
         
     }
   
-    return "Symptome/examen";
+    return "Examen/AjoutExamen";
       
   }
-
-@GetMapping("/AddExamenUser")
-public String AddExamenUser(Integer libelle,Integer consultation,Model model ) { 
-	Examen exa = (examen_service.findById(libelle)).get();
-	Consultation cons = (consultation_service.findById(consultation)).get();
-	Examen exams = new Examen(exa,cons);
-	examen_service.save(exams);
-	List<Examen> list_sp = examen_service.findByConsultation_Id(consultation);
-	model.addAttribute("list_sp", list_sp);
 	
-	return "Symptome/sp";
-}
+					
+		@GetMapping("/AddExamenUser")
+		public String AddExamenUser(Integer examen,Integer consultation,Model model ) { 
+			
+			examen_service.AjoutExamenConsultation(consultation,examen);
+			Examen exa = (examen_service.findById(examen)).get();
+			model.addAttribute("examen", exa);
+			return "Examen/exp";
+		}
+		
+		@GetMapping("/Getexm")
+		public String Getexm(Integer consultation,Model model ) { 
+			
+			 Consultation cons = (consultation_service.findById(consultation)).get();
+			model.addAttribute("examens", cons.getExamens());
+			return "Examen/liste_examen";
+		}
+		
 
 
 

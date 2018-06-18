@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <div th:replace="fragments/header :: header-css"/>
@@ -33,10 +33,10 @@
                       <td th:text="${consultation.patient.prenom}"></td>
                       <td th:text="${consultation.patient.dateNaissance}"></td>
                       <td th:text="${consultation.patient.telephone}"></td>
-                       <td th:text="${consultation.Motif}"></td>
+                      <td th:text="${consultation.Motif}"></td>
                       <td th:text="${consultation.DateConsultation}"></td>
-                      <td><a href="#"><i class="fa fa-folder-open"></i> </a></td>
-                 	  <td><a href="#"><i class="fa fa-link"></i></a></td> 
+                      <td><a th:href="@{consultation/{id}(id=${consultation.id})}"><i class="fa fa-link"></i></a></td>
+                      <td><a href="#"><i class="fa fa-folder-open"></i> </a></td>        
                  	  <td><a href="#"><i class="fa fa-header"></i></a></td> 
                 </tr>                            
          </tbody>

@@ -1,0 +1,21 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    
+       
+         <div class="form-group">
+                      <span th:each="examen : ${examens}">
+                      <label th:text="${examen.libelle}"></label>
+                        <input name="examen[]" type="checkbox" th:value="${examen.id}" >  
+                  	  	
+                  	  </span>
+                  
+                  </div>
+  
+                     <div class="modal-footer">
+             <button class="btn btn-primary" id= "addexamen"> Valider </button>
+            </div>
+          
+    </div>
+  </div>
+</div>

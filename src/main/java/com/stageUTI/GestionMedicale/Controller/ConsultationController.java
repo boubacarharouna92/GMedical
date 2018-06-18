@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -67,11 +68,12 @@ public class ConsultationController {
 	
 	
 	 @GetMapping("/consultation/{id}")
-	  public String showconsultation(Integer id_patient, Model model) { 
+	  public String showconsultation(@PathVariable("id") Integer id, Model model) { 
 	     
-	        Consultation consultation =   (consultation_service.findById(id_patient)).get();
+	        Consultation consultation =   (consultation_service.findById(id)).get();
 	        model.addAttribute("consultation", consultation);
-	        
+	        model.addAttribute("id_consultation", id);
+	        model.addAttribute("patient",consultation.getPatient()); 
 	      
 	      return "Consultation/consultation";
 	      
@@ -101,39 +103,62 @@ public class ConsultationController {
 	    public String AjouterConsult() { 	    
 		 	return "Consultation/AjouterConsult";
 	    }
-	 @PostMapping("/AjouterConsult")
-	  public String ClasseSubmit(@Valid ConsultForm form,BindingResult bindingResult, Model model) {
-	    if (!bindingResult.hasErrors()) 
-	    {
-	        
-	        Date DateConsultation = form.getDateConsultation(); 
-	        String Motif = form.getMotif(); 
-	        
-	        try
-	        {
-	        	Consultation consultation = new Consultation(DateConsultation,Motif);
-	          
-	        	consultation_service.save(consultation);
-	          
-	        }
-		    catch(Exception e)
-		    {
-		      
-		    }
-	    }
-	    else
-	    {
-	        
-	        
-	    }
-	  
-	    return "Consultation/AjouterConsult";
-	      
-	  }
 	 
+	 @GetMapping("/AjoutConsultation/{id}")
+	  public String ajoutConsultation(ConsultForm form,@PathVariable("id") Integer id, Model model, HttpSession session) { 
+	      //model.addAttribute("form", form);
+		 
+		 session.setAttribute("idPatient", id);
+	      
+	     return"Consultation/AjouterConsult";
+	  }
+	  
+	 
+	 
+	 @PostMapping("/AjouterConsult")
+	  public String ClasseSubmit(@Valid ConsultForm form,BindingResult bindingResult, Model model, HttpSession session) {
+		 
+		 	List<Patient> patients =  (List<Patient>) patient_service.findByValide(1);
+	        model.addAttribute("patients", patients);
+				    if (!bindingResult.hasErrors()) 
+				    {
+				        
+				        
+				        String Motif = form.getMotif(); 
+				        
+				        try
+				        {
+				        	Integer idPatient = (Integer) session.getAttribute("idPatient");
+				        	Patient patient = (patient_service.findById(idPatient)).get();
+					        patient.setValide(0);
+					        patient_service.save(patient);
+					        
+					        Consultation consultation = new Consultation();
+					        
+					        consultation.setDateConsultation(new Date());
+					        consultation.setPatient(patient); 
+					        consultation.setMotif(Motif);
+					        consultation_service.save(consultation); 
+				          
+				        }
+					    catch(Exception e)
+					    {
+					      
+					    }
+				    }
+				    else
+				    {
+				        
+				        
+				    }
+				  
+				    return "redirect:/ListePatient";
+				      
+				  }
+				 
 		/*
 		Listes  
-	  */
+		 */
 		
 		@GetMapping("/listeConsult")
 		 public String consultation_servicehowRegion(Model model) {
@@ -218,12 +243,15 @@ public class ConsultationController {
 			    
 		  }
 		 
-		 @GetMapping("/AjoutConsultation /{id}")
-		  public String showAjoutConsultation(PatientForm form,@PathVariable("id") Integer id, Model model) { 
+		/* @GetMapping("/AjoutConsultation/{id}")
+		  public String showAjoutConsultation(ConsultForm form,@PathVariable("id") Integer id, Model model) { 
 		      model.addAttribute("form", form);
+		      
+		      String Motif = form.getMotif();
 		      
 		      try
 		      {
+		    	  
 		    	  Patient patient = (patient_service.findById(id)).get();
 			        patient.setValide(0);
 			        patient_service.save(patient);
@@ -232,12 +260,10 @@ public class ConsultationController {
 			        
 			        consultation.setDateConsultation(new Date());
 			        consultation.setPatient(patient); 
-			        consultation.setMotif("urgent");
+			        consultation.setMotif(Motif);
 			        consultation_service.save(consultation); 
 			        
-			        
-			        
-			        
+			     
 		        List<Patient> patients =  (List<Patient>) patient_service.findByValide(1);
 		        model.addAttribute("patients", patients);
 		       
@@ -246,9 +272,9 @@ public class ConsultationController {
 		      {
 		      
 		      }
-		      return "redirect:/ListePatient";
+		      return "Consultation/AjouterConsult";
 		      
-		  }
+		  }*/
 		  
 		 
 		 

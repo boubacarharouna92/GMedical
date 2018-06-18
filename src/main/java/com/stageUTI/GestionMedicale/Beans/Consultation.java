@@ -29,10 +29,13 @@ public class Consultation {
 	
 	 @ManyToMany
 	 private Set<Symptome> symptomes;
+	 
+	 @ManyToMany
+	 private Set<Examen> examens;
 	
-	public Consultation(Date dateConsultation, String motif) {
+	public Consultation(String motif) {
 		
-		DateConsultation = dateConsultation;
+		
 		Motif = motif;
 	}
 	public Consultation() {
@@ -75,6 +78,20 @@ public class Consultation {
 	public void setMedecin(Medecin medecin) {
 		this.medecin = medecin;
 	}
+	public Set<Symptome> getSymptomes() {
+		return symptomes;
+	}
+	public void setSymptomes(Set<Symptome> symptomes) {
+		this.symptomes = symptomes;
+	}
+	public Set<Examen> getExamens() {
+		return examens;
+	}
+	public void setExamens(Set<Examen> examens) {
+		this.examens = examens;
+	}
+	
+	
 	
 	
 	

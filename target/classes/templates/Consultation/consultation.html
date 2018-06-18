@@ -11,7 +11,7 @@
 	</ul>
 	<div th:replace="fragments/header :: header"/>
 	<section id="main-body">
-	<input type="hidden" value="11" id="consultation" />
+	<input type="hidden" th:value="${id_consultation}" id="consultation" />
 	  	<div class="container">
 		   	<div class="row">
 		   	<div class="col-md-6">
@@ -79,7 +79,7 @@
 				               <th align="center" class="btn_action"></th>
 				           </tr>
 				         </thead>
-				         <tbody>                               
+				          <tbody id="sp">                               
 				         </tbody>
 				     </table>
 			  		</div>
@@ -99,13 +99,13 @@
 				     <table class="datatable-responsive table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 				        <thead>
 				           <tr>
-				               <th >Parametre</th>
-				               <th > Valeur</th>
+				               <th >Libelle</th>
+				               
 				               <th align="center" class="btn_action"></th>
 				               <th align="center" class="btn_action"></th>
 				           </tr>
 				         </thead>
-				         <tbody >                               
+				         <tbody id="exp">                               
 				         </tbody>
 				     </table>
 			  		</div>

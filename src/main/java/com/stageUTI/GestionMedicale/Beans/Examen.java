@@ -1,5 +1,7 @@
 package com.stageUTI.GestionMedicale.Beans;
 import java.util.Date;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,8 +19,8 @@ public class Examen {
 	private String libelle;
 	private Integer  valide=1;
 	
-	@ManyToOne
-	private Consultation consultation; 
+	@ManyToMany(mappedBy = "examens")
+	private Set<Consultation> consultation;
 	
 	public Examen( String libelle) {
 		
@@ -49,10 +51,10 @@ public class Examen {
 	public void setValide(Integer valide) {
 		this.valide = valide;
 	}
-	public Consultation getConsultation() {
+	public Set<Consultation> getConsultation() {
 		return consultation;
 	}
-	public void setConsultation(Consultation consultation) {
+	public void setConsultation(Set<Consultation> consultation) {
 		this.consultation = consultation;
 	}
 	

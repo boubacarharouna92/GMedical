@@ -1,7 +1,9 @@
 package com.stageUTI.GestionMedicale.Repository;
 
+import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -11,7 +13,8 @@ public interface ConsultationRepository extends CrudRepository<Consultation, Int
 	
 
 	  List<Consultation> findByValide(Integer valide);
+	 
+	//Consultation findByDateConsultation(Date DateConsultation);
 	  
-	  @Query("SELECT p from Patient p")
-	  List<Consultation> findConsultBy();
+	
 }

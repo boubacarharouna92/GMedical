@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.stageUTI.GestionMedicale.Beans.Consultation;
+import com.stageUTI.GestionMedicale.Beans.Patient;
 import com.stageUTI.GestionMedicale.Beans.Symptome;
 import com.stageUTI.GestionMedicale.Beans.Symptome;
 import com.stageUTI.GestionMedicale.Beans.Symptome;
@@ -35,7 +36,11 @@ public class SymptomeController {
 	 
 
 	 @GetMapping("/AjoutSymptome")
-	    public String AjoutSymptome() { 	    
+	    public String AjoutSymptome(Model model) { 
+		 
+		 List<Symptome> symptomes =  (List<Symptome>) symptome_service.findByValide(1);
+	        model.addAttribute("symptomes", symptomes);
+	        
 		 	return "Symptome/AjoutSymptome";
 	    }
 	@PostMapping("/AjoutSymptome")
@@ -67,19 +72,20 @@ public class SymptomeController {
 	  }
 	
 	@GetMapping("/AddSymptomeUser")
-    public String AddSymptomeUser(String libelle,Integer consultation,Model model ) { 
-		/*Symptome symp = (symptome_service.findById(libelle)).get();*/
+    public String AddSymptomeUser(Integer symptome,Integer consultation,Model model ) { 
 		
-		Consultation cons = (consultation_service.findById(consultation)).get();
-		Set<Consultation> consultations = new HashSet();
-		consultations.add(cons);
-		Symptome symp =  new Symptome(libelle,consultations);
-		//Symptome symps = new Symptome(symp,cons);
-		symptome_service.save(symp);
-		List<Symptome> list_sp = symptome_service.findByConsultation_Id(consultation);
-		model.addAttribute("list_sp", list_sp);
-		
+		symptome_service.AjoutSymptomeConsultation(consultation,symptome);
+		Symptome syn = (symptome_service.findById(symptome)).get();
+		model.addAttribute("symptome", syn);
 		return "Symptome/sp";
+    }
+	
+	@GetMapping("/GetSP")
+    public String GetSP(Integer consultation,Model model ) { 
+		
+		 Consultation cons = (consultation_service.findById(consultation)).get();
+		model.addAttribute("symptomes", cons.getSymptomes());
+		return "Symptome/liste_sp";
     }
 	
 	

@@ -4,8 +4,12 @@
     
        
          <div class="form-group">
-                      <label for="libelle" >Libelle</label>
-                      <input type="text" class="form-control" id="valeur" name="valeur"  />
+                      <span th:each="symptome : ${symptomes}">
+                      <label th:text="${symptome.libelle}"></label>
+                        <input name="symptome[]" type="checkbox" th:value="${symptome.id}" >  
+                  	  	
+                  	  </span>
+                  
                   </div>
   
                      <div class="modal-footer">
