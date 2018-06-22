@@ -37,8 +37,8 @@
                       <td th:text="${consultation.DateConsultation}"></td>
                       <td><a th:href="@{consultation/{id}(id=${consultation.id})}"><i class="fa fa-link"></i></a></td>
                       <td><a href="#"><i class="fa fa-folder-open"></i> </a></td>        
-                 	  <td><a href="#"><i class="fa fa-header"></i></a></td> 
-                </tr>                            
+                 	  <td><a th:href="@{AjoutRDV/{id}(id=${consultation.patient.id})}"><i class="fa fa-header"></i></a></td>
+                </tr>
          </tbody>
      </table>
         </div>

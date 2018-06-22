@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.mysql.fabric.xmlrpc.base.Data;
 import com.stageUTI.GestionMedicale.Beans.Chambre;
 import com.stageUTI.GestionMedicale.Beans.Consultation;
 import com.stageUTI.GestionMedicale.Beans.Parametre;
@@ -130,15 +129,14 @@ public class ConsultationController {
 				        {
 				        	Integer idPatient = (Integer) session.getAttribute("idPatient");
 				        	Patient patient = (patient_service.findById(idPatient)).get();
-					        patient.setValide(0);
+					        patient.setValide(2);
 					        patient_service.save(patient);
-					        
+
 					        Consultation consultation = new Consultation();
-					        
 					        consultation.setDateConsultation(new Date());
 					        consultation.setPatient(patient); 
 					        consultation.setMotif(Motif);
-					        consultation_service.save(consultation); 
+					        consultation_service.save(consultation);
 				          
 				        }
 					    catch(Exception e)

@@ -11,7 +11,7 @@
 		<div class="container">
 			<div class="row">
 					<div class="pull-right">
-					   	<button class="btn btn-success"  th:href="@{/AjoutRDV}"  ><i class="fa fa-plus-circle"></i> <span>Creer un rendez-vous </span></button >						
+					   	<button class="btn btn-success" data-toggle="modal" th:href="@{/AjoutRDV}"  ><i class="fa fa-plus-circle"></i> <span>Creer un rendez-vous </span></button >
 					</div>
 						<br><br>
 				<div class="table-responsive">
@@ -20,6 +20,8 @@
 						cellspacing="0" width="100%">
 						<thead>
 							<tr>
+								<th>Nom</th>
+								<th>PRenom</th>
 								<th>date RDV</th>
 								<th>heure RDV</th>
 								<th>Motif</th>
@@ -29,10 +31,11 @@
 						</thead>
 						<tbody>
 							<tr th:each="rdv : ${rdvs}">
+								<td th:text="${rdv.patient.nom}"></td>
+								<td th:text="${rdv.patient.prenom}"></td>
 								<td th:text="${rdv.dateRdv}"></td>
 								<td th:text="${rdv.heureRdv}"></td>
 								<td th:text="${rdv.MotifRdv}"></td>
-								
 
 								<td><a href="#"><i class="fa fa-pencil"></i> </a></td>
 								<td><a href="#"><i class="fa fa-remove"></i> </a></td>

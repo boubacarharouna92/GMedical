@@ -12,9 +12,6 @@ import javax.persistence.Table;
 
 public class RDVForm {
 	
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
     private Date dateRdv;
     private Time heureRdv;
     private String MotifRdv;
@@ -27,7 +24,6 @@ public class RDVForm {
 	}
 	public RDVForm() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public Date getDateRdv() {
 		return dateRdv;
@@ -47,6 +43,12 @@ public class RDVForm {
 	public void setMotifRdv(String motifRdv) {
 		MotifRdv = motifRdv;
 	}
-    
 
+	public Integer getValide() {
+		return valide;
+	}
+
+	public void setValide(Integer valide) {
+		this.valide = valide;
+	}
 }

@@ -1,0 +1,1895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e6aed1f8-059d-4610-bcec-5bb7cbb75839" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/RDV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/RDV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/BeansForm/RDVForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/BeansForm/RDVForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/ConsultationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/ConsultationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/HospitalisationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/HospitalisationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/RDVController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/RDVController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/GestionMedicaleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/GestionMedicaleApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Consultation/ajout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Consultation/ajout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Consultation/listeConsult.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Consultation/listeConsult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/RDV/AjoutRDV.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/RDV/AjoutRDV.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/RDV/ListeRDV.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/RDV/ListeRDV.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/stageUTI/GestionMedicale/GestionMedicaleApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/stageUTI/GestionMedicale/GestionMedicaleApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.stageUTI/GestionMedicale/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.stageUTI/GestionMedicale/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Consultation/ajout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Consultation/ajout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Consultation/listeConsult.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Consultation/listeConsult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/RDV/AjoutRDV.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/RDV/AjoutRDV.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/RDV/ListeRDV.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/RDV/ListeRDV.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1886513985">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="23" />
+          <entry key="java" value="54" />
+          <entry key="properties" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Git file" value="1" />
+          <entry key="HTML" value="23" />
+          <entry key="JAVA" value="54" />
+          <entry key="Properties" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gitignore" value="123" />
+          <entry key="html" value="188" />
+          <entry key="java" value="567" />
+          <entry key="properties" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Git file" value="123" />
+          <entry key="HTML" value="188" />
+          <entry key="JAVA" value="567" />
+          <entry key="Properties" value="14" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.73913044">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/RDVController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="69" column="65" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
+                  <folding>
+                    <element signature="e#1471#1472#0" expanded="true" />
+                    <element signature="e#1511#1512#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/BeansForm/RDVForm.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="126">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                  <folding>
+                    <element signature="e#643#644#0" expanded="true" />
+                    <element signature="e#657#658#0" expanded="true" />
+                    <element signature="e#1095#1096#0" expanded="true" />
+                    <element signature="e#1115#1116#0" expanded="true" />
+                    <element signature="e#1157#1158#0" expanded="true" />
+                    <element signature="e#1184#1185#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/RDV/AjoutRDV.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-144">
+                  <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/GestionMedicaleApplication.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="149">
+                  <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+                  <folding>
+                    <element signature="e#565#566#0" expanded="true" />
+                    <element signature="e#633#634#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/RDV/ListeRDV.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-18">
+                  <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Patients/ListePatient.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-342">
+                  <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Service/UserService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-974">
+                  <caret line="25" column="32" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="32" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/stageUTI/GestionMedicale/GestionMedicaleApplicationTests.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="5" column="36" lean-forward="true" selection-end-line="16" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/BeansForm/ConsultForm.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/ConsultationController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="786">
+                  <caret line="111" column="45" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="49" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/ConsultationController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="100">
+                  <caret line="131" column="47" selection-start-line="131" selection-start-column="47" selection-end-line="131" selection-end-column="47" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../jhipster/electronicarmory/armory" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Medecin.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/HospitalisationController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/Consultation/listeConsult.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/RDV.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/Consultation/ajout.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/ConsultationController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/RDV/AjoutRDV.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/BeansForm/RDVForm.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/stageUTI/GestionMedicale/GestionMedicaleApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/GestionMedicaleApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/RDV/ListeRDV.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/RDVController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="GestionMedicale" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="177" />
+    <option name="y" value="88" />
+    <option name="width" value="1189" />
+    <option name="height" value="655" />
+  </component>
+  <component name="ProjectUserFactors">
+    <factor id="binaryFeature:liftShorter">
+      <dailyData date="18-6-2018">
+        <observation name="false" value="19.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="false" value="4.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="false" value="7.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="false" value="59.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:liftShorterClasses">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="13.0" />
+        <observation name="false" value="6.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="false" value="4.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="false" value="6.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="10.0" />
+        <observation name="false" value="49.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:middleMatching">
+      <dailyData date="18-6-2018">
+        <observation name="false" value="19.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="false" value="4.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="false" value="6.0" />
+        <observation name="true" value="1.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="false" value="59.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:nonGeneric">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="19.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="0" value="1.0" />
+        <observation name="UNDEFINED" value="3.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="0" value="1.0" />
+        <observation name="UNDEFINED" value="6.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="0" value="21.0" />
+        <observation name="UNDEFINED" value="38.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:prox_inResolveScope">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="false" value="13.0" />
+        <observation name="true" value="4.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="true" value="4.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="true" value="6.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="false" value="11.0" />
+        <observation name="true" value="44.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:prox_openedInEditor">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="false" value="15.0" />
+        <observation name="true" value="2.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="false" value="2.0" />
+        <observation name="true" value="2.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="false" value="2.0" />
+        <observation name="true" value="4.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="false" value="39.0" />
+        <observation name="true" value="16.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:prox_sameDirectory">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="false" value="8.0" />
+        <observation name="true" value="9.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="false" value="2.0" />
+        <observation name="true" value="2.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="false" value="4.0" />
+        <observation name="true" value="2.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="false" value="39.0" />
+        <observation name="true" value="16.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:prox_sameLogicalRoot">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="false" value="14.0" />
+        <observation name="true" value="3.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="false" value="2.0" />
+        <observation name="true" value="2.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="false" value="1.0" />
+        <observation name="true" value="5.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="false" value="23.0" />
+        <observation name="true" value="32.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:prox_sdkOrLibrary">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="false" value="16.0" />
+        <observation name="true" value="1.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="false" value="3.0" />
+        <observation name="true" value="1.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="false" value="6.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="false" value="46.0" />
+        <observation name="true" value="9.0" />
+      </dailyData>
+    </factor>
+    <factor id="binaryFeature:templates">
+      <dailyData date="18-6-2018">
+        <observation name="false" value="19.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="false" value="4.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="false" value="7.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="false" value="59.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:accessible">
+      <dailyData date="18-6-2018">
+        <observation name="NORMAL" value="7.0" />
+        <observation name="UNDEFINED" value="12.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="NORMAL" value="4.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="NORMAL" value="6.0" />
+        <observation name="UNDEFINED" value="1.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="NORMAL" value="55.0" />
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:expectedType">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="12.0" />
+        <observation name="normal" value="7.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="expected" value="1.0" />
+        <observation name="normal" value="3.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="expected" value="1.0" />
+        <observation name="normal" value="5.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="expected" value="7.0" />
+        <observation name="maybeExpected" value="7.0" />
+        <observation name="normal" value="41.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:kind">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="12.0" />
+        <observation name="classNameOrGlobalStatic" value="4.0" />
+        <observation name="normal" value="3.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="classNameOrGlobalStatic" value="1.0" />
+        <observation name="expectedTypeVariable" value="1.0" />
+        <observation name="suitableClass" value="1.0" />
+        <observation name="variable" value="1.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="classNameOrGlobalStatic" value="1.0" />
+        <observation name="expectedTypeVariable" value="1.0" />
+        <observation name="normal" value="3.0" />
+        <observation name="variable" value="1.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="classNameOrGlobalStatic" value="12.0" />
+        <observation name="expectedTypeVariable" value="3.0" />
+        <observation name="normal" value="26.0" />
+        <observation name="suitableClass" value="1.0" />
+        <observation name="variable" value="13.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:prox_groovyReferenceListWeigher">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="unknown" value="17.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="unknown" value="4.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="unknown" value="6.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="unknown" value="55.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:prox_javaInheritance">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="false" value="4.0" />
+        <observation name="null" value="13.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="false" value="2.0" />
+        <observation name="null" value="2.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="false" value="1.0" />
+        <observation name="null" value="5.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="false" value="13.0" />
+        <observation name="null" value="42.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:prox_referenceList">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="applicableByKind" value="1.0" />
+        <observation name="unknown" value="16.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="unknown" value="4.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="unknown" value="6.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="unknown" value="55.0" />
+      </dailyData>
+    </factor>
+    <factor id="categoricalFeature:recursion">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="19.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="normal" value="2.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="normal" value="5.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="11.0" />
+        <observation name="normal" value="48.0" />
+      </dailyData>
+    </factor>
+    <factor id="completionFinishedType">
+      <dailyData date="18-6-2018">
+        <observation name="cancelled" value="108.0" />
+        <observation name="explicitSelect" value="11.0" />
+        <observation name="typedSelect" value="8.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="cancelled" value="16.0" />
+        <observation name="explicitSelect" value="3.0" />
+        <observation name="typedSelect" value="1.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="cancelled" value="72.0" />
+        <observation name="explicitSelect" value="7.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="cancelled" value="43.0" />
+        <observation name="explicitSelect" value="35.0" />
+        <observation name="typedSelect" value="24.0" />
+      </dailyData>
+    </factor>
+    <factor id="completionType">
+      <dailyData date="18-6-2018">
+        <observation name="BASIC" value="24.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="BASIC" value="4.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="BASIC" value="8.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="BASIC" value="66.0" />
+      </dailyData>
+    </factor>
+    <factor id="completionUsage">
+      <dailyData date="18-6-2018">
+        <observation name="count" value="127.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="count" value="20.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="count" value="79.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="count" value="102.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:explicitProximity">
+      <dailyData date="18-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="37.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="average" value="0.307692" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.118141" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="average" value="0.188034" />
+        <observation name="count" value="117.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.127382" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:grouping">
+      <dailyData date="18-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="37.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="117.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:mostUsed">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="average" value="-40.428571" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="-1.0" />
+        <observation name="min" value="-205.0" />
+        <observation name="variance" value="1956.939184" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="average" value="-150.333333" />
+        <observation name="count" value="3.0" />
+        <observation name="max" value="-33.0" />
+        <observation name="min" value="-209.0" />
+        <observation name="variance" value="1720.888889" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="average" value="-3.8" />
+        <observation name="count" value="5.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-7.0" />
+        <observation name="variance" value="3.671111" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="35.0" />
+        <observation name="average" value="-6.021277" />
+        <observation name="count" value="47.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-44.0" />
+        <observation name="variance" value="84.393512" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:nameEnd">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="12.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="-0.285714" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1.0" />
+        <observation name="variance" value="0.085986" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="average" value="-0.181818" />
+        <observation name="count" value="11.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1.0" />
+        <observation name="variance" value="0.077632" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="average" value="-0.018349" />
+        <observation name="count" value="109.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1.0" />
+        <observation name="variance" value="0.010855" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:position">
+      <dailyData date="18-6-2018">
+        <observation name="average" value="0.162162" />
+        <observation name="count" value="37.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.111318" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="average" value="0.769231" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="3.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.582399" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="average" value="0.512821" />
+        <observation name="count" value="117.0" />
+        <observation name="max" value="9.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="2.027882" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:prefix">
+      <dailyData date="18-6-2018">
+        <observation name="average" value="-1068.783784" />
+        <observation name="count" value="37.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1153.0" />
+        <observation name="variance" value="48729.72457" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="-1095.142857" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="-1052.0" />
+        <observation name="min" value="-1152.0" />
+        <observation name="variance" value="1067.431973" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="average" value="-986.307692" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="-1.0" />
+        <observation name="min" value="-1202.0" />
+        <observation name="variance" value="81134.450879" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="average" value="-1116.504274" />
+        <observation name="count" value="117.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1202.0" />
+        <observation name="variance" value="21430.779459" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:priority">
+      <dailyData date="18-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="37.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="117.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:prox_explicitlyImported">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="average" value="60.606061" />
+        <observation name="count" value="33.0" />
+        <observation name="max" value="300.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="5525.632896" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="185.714286" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="300.0" />
+        <observation name="min" value="100.0" />
+        <observation name="variance" value="4310.204082" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="average" value="118.181818" />
+        <observation name="count" value="11.0" />
+        <observation name="max" value="300.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="10152.013851" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="average" value="102.752294" />
+        <observation name="count" value="109.0" />
+        <observation name="max" value="300.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="13878.078539" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:prox_knownElement">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="average" value="0.363636" />
+        <observation name="count" value="33.0" />
+        <observation name="max" value="6.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="1.172587" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="1.714286" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="6.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="3.061224" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="11.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="average" value="0.917431" />
+        <observation name="count" value="109.0" />
+        <observation name="max" value="8.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="4.345068" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:prox_sameModule">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="average" value="1.454545" />
+        <observation name="count" value="33.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.481276" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="0.857143" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.43102" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="average" value="1.636364" />
+        <observation name="count" value="11.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.288195" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="average" value="1.174312" />
+        <observation name="count" value="109.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.789161" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:prox_samePsiMember">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="33.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="0.714286" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.337415" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="average" value="0.727273" />
+        <observation name="count" value="11.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.475587" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="average" value="0.568807" />
+        <observation name="count" value="109.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.646867" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:query_length">
+      <dailyData date="18-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="37.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="117.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:result_length">
+      <dailyData date="18-6-2018">
+        <observation name="average" value="7.243243" />
+        <observation name="count" value="37.0" />
+        <observation name="max" value="14.0" />
+        <observation name="min" value="3.0" />
+        <observation name="variance" value="5.113869" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="8.428571" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="12.0" />
+        <observation name="min" value="7.0" />
+        <observation name="variance" value="2.268707" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="average" value="8.846154" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="14.0" />
+        <observation name="min" value="3.0" />
+        <observation name="variance" value="6.175782" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="average" value="6.555556" />
+        <observation name="count" value="117.0" />
+        <observation name="max" value="17.0" />
+        <observation name="min" value="3.0" />
+        <observation name="variance" value="9.412966" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:sameWords">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="12.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="-0.285714" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1.0" />
+        <observation name="variance" value="0.085986" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="average" value="-0.181818" />
+        <observation name="count" value="11.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1.0" />
+        <observation name="variance" value="0.077632" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="average" value="-0.018349" />
+        <observation name="count" value="109.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1.0" />
+        <observation name="variance" value="0.010855" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:shorter">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="12.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="-285.428571" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-999.0" />
+        <observation name="variance" value="85814.507755" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="average" value="-181.636364" />
+        <observation name="count" value="11.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-999.0" />
+        <observation name="variance" value="77476.625839" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="average" value="-18.330275" />
+        <observation name="count" value="109.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-999.0" />
+        <observation name="variance" value="10833.395638" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:simple">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="12.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="1.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="11.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="109.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:sorter">
+      <dailyData date="18-6-2018">
+        <observation name="average" value="1.0" />
+        <observation name="count" value="37.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="1.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="average" value="1.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="average" value="1.0" />
+        <observation name="count" value="117.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:statics">
+      <dailyData date="18-6-2018">
+        <observation name="UNDEFINED" value="12.0" />
+        <observation name="average" value="-3.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="-3.0" />
+        <observation name="min" value="-3.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="UNDEFINED" value="2.0" />
+        <observation name="average" value="-3.0" />
+        <observation name="count" value="3.0" />
+        <observation name="max" value="-3.0" />
+        <observation name="min" value="-3.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="UNDEFINED" value="6.0" />
+        <observation name="average" value="-3.0" />
+        <observation name="count" value="1.0" />
+        <observation name="max" value="-3.0" />
+        <observation name="min" value="-3.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="UNDEFINED" value="47.0" />
+        <observation name="average" value="-3.086957" />
+        <observation name="count" value="23.0" />
+        <observation name="max" value="-3.0" />
+        <observation name="min" value="-4.0" />
+        <observation name="variance" value="0.037893" />
+      </dailyData>
+    </factor>
+    <factor id="doubleFeature:stats">
+      <dailyData date="18-6-2018">
+        <observation name="average" value="540.486486" />
+        <observation name="count" value="37.0" />
+        <observation name="max" value="9999.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="3095447.947915" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="5700.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="9998.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="10719206.975238" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="13.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="average" value="2220.205128" />
+        <observation name="count" value="117.0" />
+        <observation name="max" value="10000.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="10763064.256311" />
+      </dailyData>
+    </factor>
+    <factor id="itemPosition">
+      <dailyData date="18-6-2018">
+        <observation name="0" value="8.0" />
+        <observation name="1" value="3.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="0" value="3.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="0" value="4.0" />
+        <observation name="1" value="2.0" />
+        <observation name="3" value="1.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="0" value="26.0" />
+        <observation name="1" value="2.0" />
+        <observation name="2" value="4.0" />
+        <observation name="5" value="1.0" />
+        <observation name="6" value="1.0" />
+        <observation name="9" value="1.0" />
+      </dailyData>
+    </factor>
+    <factor id="mnemonicsUsage">
+      <dailyData date="18-6-2018">
+        <observation name="total" value="8.0" />
+        <observation name="withMnemonics" value="0.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="total" value="3.0" />
+        <observation name="withMnemonics" value="0.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="total" value="6.0" />
+        <observation name="withMnemonics" value="1.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="total" value="31.0" />
+        <observation name="withMnemonics" value="0.0" />
+      </dailyData>
+    </factor>
+    <factor id="prefixLength">
+      <dailyData date="18-6-2018">
+        <observation name="0" value="1.0" />
+        <observation name="1" value="2.0" />
+        <observation name="2" value="2.0" />
+        <observation name="3" value="6.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="2" value="1.0" />
+        <observation name="3" value="2.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="1" value="1.0" />
+        <observation name="2" value="3.0" />
+        <observation name="3" value="2.0" />
+        <observation name="4" value="1.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="0" value="1.0" />
+        <observation name="1" value="3.0" />
+        <observation name="2" value="14.0" />
+        <observation name="3" value="11.0" />
+        <observation name="4" value="2.0" />
+        <observation name="5" value="3.0" />
+        <observation name="9" value="1.0" />
+      </dailyData>
+    </factor>
+    <factor id="timeBetweenTyping">
+      <dailyData date="18-6-2018">
+        <observation name="average" value="326.791045" />
+        <observation name="count" value="67.0" />
+      </dailyData>
+      <dailyData date="20-6-2018">
+        <observation name="average" value="200.0" />
+        <observation name="count" value="16.0" />
+      </dailyData>
+      <dailyData date="21-6-2018">
+        <observation name="average" value="499.7" />
+        <observation name="count" value="10.0" />
+      </dailyData>
+      <dailyData date="22-6-2018">
+        <observation name="average" value="442.183908" />
+        <observation name="count" value="87.0" />
+      </dailyData>
+    </factor>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="GestionMedicale" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="GestionMedicale" type="462c0819:PsiDirectoryNode" />
+              <item name="BeansForm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="GestionMedicale" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="GestionMedicale" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="GestionMedicale" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Consultation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Patients" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="RDV" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionMedicale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GMedical" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="GestionMedicale" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1529657003759" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="GestionMedicaleApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.stageUTI.GestionMedicale.GestionMedicaleApplication" />
+      <module name="GestionMedicale" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stageUTI.GestionMedicale.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GestionMedicaleApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6aed1f8-059d-4610-bcec-5bb7cbb75839" name="Default Changelist" comment="" />
+      <created>1529329555023</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1529329555023</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18106061" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22697368" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32894737" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.59539473" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32954547" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/GestionMedicaleApplication.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Symptome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Specialite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Posologie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Patient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Parametre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Ordonnance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/mesure_parametre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Medicament.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Hospitalisation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Examen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/DossierMedical.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Chambre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Antecedent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Medecin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/HospitalisationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Consultation/consultation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="23" column="83" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/Consultation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Consultation/ajout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/PatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="92" column="28" lean-forward="true" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+          <folding>
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Repository/RDVRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Beans/RDV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1093#1094#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Consultation/AjouterConsult.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Consultation/listeConsult.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="59" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/BeansForm/PatientForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/ExamenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/BeansForm/ConsultForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/BeansForm/RDVForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#1184#1185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/stageUTI/GestionMedicale/GestionMedicaleApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="36" lean-forward="true" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-974">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/ConsultationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="786">
+          <caret line="111" column="45" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/GestionMedicaleApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+          <folding>
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/RDV/ListeRDV.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Patients/ListePatient.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/RDV/AjoutRDV.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stageUTI/GestionMedicale/Controller/RDVController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="69" column="65" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
+          <folding>
+            <element signature="e#1471#1472#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

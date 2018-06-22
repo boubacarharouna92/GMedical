@@ -4,11 +4,7 @@ package com.stageUTI.GestionMedicale.Beans;
 import java.sql.Time;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "RDV")
@@ -21,6 +17,12 @@ public class RDV {
     private Time heureRdv;
     private String MotifRdv;
     private Integer  valide=1;
+
+    @ManyToOne
+    private Patient patient;
+
+    @ManyToOne
+    private Medecin medecin;
 	public RDV(Date dateRdv, Time heureRdv, String motifRdv) {
 		super();
 		this.dateRdv = dateRdv;
@@ -31,7 +33,40 @@ public class RDV {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Date getDateRdv() {
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getValide() {
+        return valide;
+    }
+
+    public void setValide(Integer valide) {
+        this.valide = valide;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public Medecin getMedecin() {
+        return medecin;
+    }
+
+    public void setMedecin(Medecin medecin) {
+        this.medecin = medecin;
+    }
+
+    public Date getDateRdv() {
 		return dateRdv;
 	}
 	public void setDateRdv(Date dateRdv) {

@@ -7,8 +7,11 @@ import java.util.List;
 import java.util.Timer;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import com.stageUTI.GestionMedicale.Beans.Patient;
+import com.stageUTI.GestionMedicale.BeansForm.ConsultForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -32,28 +35,50 @@ public class RDVController{
 
 	@Resource
 	  private RDVRepository rdv_service;
+
+	@Resource
+	private PatientRepository patient_service;
 	
 		/*
 			Ajouter RDV
 		 */
 	
 	 @GetMapping("/AjoutRDV")
-	    public String AjoutRDV() { 	    
+	 public String AjoutRDV() {
 		 	return "RDV/AjoutRDV";
 	    }
+	@GetMapping("/AjoutRDV/{id}")
+	public String ajoutRDV(RDVForm form, @PathVariable("id") Integer id, Model model, HttpSession session) {
+		//model.addAttribute("form", form);
+
+		session.setAttribute("idPatient", id);
+
+		return"RDV/AjoutRDV";
+	}
 	 
 	 @PostMapping("/AjoutRDV")
-	  public String ClasseSubmit(@Valid RDVForm form,BindingResult bindingResult, Model model) {
-	    if (!bindingResult.hasErrors()) 
-	    {
+	  public String ClasseSubmit(@Valid RDVForm form,BindingResult bindingResult, Model model, HttpSession session) {
+		System.out.println("ajout d'un rdv");
+	 	List<Patient> patients =  (List<Patient>) patient_service.findByValide(3);
+		 model.addAttribute("patients", patients);
+		 if (!bindingResult.hasErrors())
+		 {
+
 	    	 Date dateRdv =form.getDateRdv();
 	    	 Time heureRdv= form.getHeureRdv();
 	    	 String MotifRdv=form.getMotifRdv();
-	    	 
-	        try
+			 System.out.println(dateRdv+" "+heureRdv+" "+MotifRdv);
+
+
+			 try
 	        {
-	        	RDV rdv = new RDV(dateRdv,heureRdv,MotifRdv);
-	          
+				Integer idPatient = (Integer) session.getAttribute("idPatient");
+				Patient patient = (patient_service.findById(idPatient)).get();
+				patient.setValide(3);
+				System.out.println(patient.getNom()+" "+patient.getPrenom());
+				patient_service.save(patient);
+				RDV rdv = new RDV(dateRdv,heureRdv,MotifRdv);
+				rdv.setPatient(patient);
 	        	rdv_service.save(rdv);
 	          
 	        }
@@ -68,7 +93,7 @@ public class RDVController{
 	        
 	    }
 	  
-	    return "RDV/AjoutRDV";
+	    return "RDV/ListeRDV";
 	      
 	  }
 	 
